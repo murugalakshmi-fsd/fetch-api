@@ -73,8 +73,12 @@ document.addEventListener("DOMContentLoaded", function () {
       fetch(apiUrl)
         .then((response) => response.json())
         .then((data) => {
-          alert(`Weather in ${city}: ${data.weather[0].description}`);
-        })
+        let weatherinfo = document.createElement("p");
+        weatherinfo.textContent = `weather in ${city}:${data.weather[0].description}`;
+        let weatherDisplay = document.createElement("div"); // Create weatherDisplay if not defined globally
+        weatherDisplay.appendChild(weatherinfo);
+        document.body.appendChild(weatherDisplay); // Append to the body or the desired container
+       })
         .catch((error) => console.error("Error fetching weather data:", error));
     }
   

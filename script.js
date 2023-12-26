@@ -73,12 +73,12 @@ document.addEventListener("DOMContentLoaded", function () {
       fetch(apiUrl)
         .then((response) => response.json())
         .then((data) => {
-        let weatherinfo = document.createElement("p");
-        weatherinfo.textContent = `weather in ${city}:${data.weather[0].description},Temp:${data.main.temp}`;
-        let weatherDisplay = document.createElement("div"); // Create weatherDisplay if not defined globally
-        weatherDisplay.appendChild(weatherinfo);
-        document.body.appendChild(weatherDisplay); // Append to the body or the desired container
-       })
+const weatherInfo = document.createElement("p");
+          weatherInfo.textContent = `Weather in ${city}:
+          ${data.weather[0].description} 
+          Temp:${data.main.temp}`;
+          weatherDisplay.innerHTML = ""; // Clear previous weather data
+          weatherDisplay.appendChild(weatherInfo);       })
         .catch((error) => console.error("Error fetching weather data:", error));
     }
   

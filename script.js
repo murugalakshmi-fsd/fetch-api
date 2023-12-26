@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .then((response) => response.json())
         .then((data) => {
         let weatherinfo = document.createElement("p");
-        weatherinfo.textContent = `weather in ${city}:${data.weather[0].description}`;
+        weatherinfo.textContent = `weather in ${city}:${data.weather[0].description},Temp:${data.main.temp}`;
         let weatherDisplay = document.createElement("div"); // Create weatherDisplay if not defined globally
         weatherDisplay.appendChild(weatherinfo);
         document.body.appendChild(weatherDisplay); // Append to the body or the desired container

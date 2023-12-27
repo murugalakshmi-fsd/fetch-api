@@ -1,8 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const countryRow = document.getElementById("countryRow");
   
-    // Function to create Bootstrap cards
-    function createCard(countryData) {
+      function createCard(countryData) {
       const column = document.createElement("div");
       column.classList.add("col-lg-4", "col-sm-12");
   

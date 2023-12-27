@@ -68,9 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .catch((error) => console.error("Error fetching country data:", error));
     }
   
-    // Function to fetch weather data from OpenWeather API
     function getWeatherData(city, lat, lon, weatherDisplay) {
-      // Replace 'YOUR_OPENWEATHER_API_KEY' with your actual API key
       const apiKey = 'cb37825acf8b0c04ffd4220ef60e2125';
       const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`;
   
@@ -87,7 +85,6 @@ document.addEventListener("DOMContentLoaded", function () {
         .catch((error) => console.error("Error fetching weather data:", error));
     }
   
-    // Initial fetch for country data
-    fetchCountryData();
+        fetchCountryData();
   });
   
